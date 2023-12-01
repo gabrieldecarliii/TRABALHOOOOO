@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="financeiro.css">
+    <title>Finanças do Condomínio</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Finanças do Condomínio</h1>
+    </header>
+
+    <section>
+        <h2>Status de Pagamento</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Morador</th>
+                    <th>Unidade</th>
+                    <th> Situação de Pagamento</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tabelaMoradores">
+                <!-- Dados dinâmicos serão inseridos aqui -->
+            </tbody>
+        </table>
+
+        <button>
+            <a href="gerarboleto.html" class="submit" vaule="Boleto">Gerar Boleto</a>
+        </button>
+       
+
+    </section>
+
+    <script>
+        // Dados de exemplo (pode ser substituído por dados dinâmicos provenientes de um banco de dados)
+        const moradores = [
+            { nome: 'João', unidade: '101', pago: true },
+            { nome: 'Maria', unidade: '102', pago: false },
+            { nome: 'Carlos', unidade: '103', pago: true },
+        ];
+
+        // Função para popular a tabela com os dados dos moradores
+        function popularTabela() {
+            const tabelaMoradores = document.getElementById('tabelaMoradores');
+
+            moradores.forEach(morador => {
+                const row = tabelaMoradores.insertRow();
+                row.insertCell(0).textContent = morador.nome;
+                row.insertCell(1).textContent = morador.unidade;
+                
+                const statusCell = row.insertCell(2);
+                statusCell.textContent = morador.pago ? 'Pago' : 'Pendente';
+                statusCell.className = morador.pago ? 'pago' : 'pendente';
+            });
+        }
+
+        // Chama a função para popular a tabela ao carregar a página
+        window.onload = popularTabela;
+    </script>
+
+
+</body>
+</html>

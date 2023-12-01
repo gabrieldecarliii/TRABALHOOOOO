@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <div>
+        <img class="logo" src="Black_Gold_Modern_Real_Estate_Logo-removebg-preview.png" alt="Minha Logomarca">
+    </div>
+    <div id="login">
+
+        <form class="card">
+
+            <div class="card-header">
+
+                <h2>Login</h2>
+
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-content-area">
+
+                    <label for="usuario">Usuário(Morador ou Sindico)</label>
+
+                    <input type="text" id="usuario" autocomplete="off">
+
+                </div>
+
+                <div class="card-content-area">
+
+                    <label for="password">Senha</label>
+
+                    <input type="password" id="password" autocomplete="off">
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <a href="paginaprincipal.php" class="submit" vaule="login">Login</a>
+                
+                <a href="cadastroMorador.php">Cadastrar-me</a>
+                <a href="recuperar_senha.php" class="recuperar_senha">Esqueceu a senha?</a>
+                
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>

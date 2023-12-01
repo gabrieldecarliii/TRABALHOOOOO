@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+  <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+  <img class="logo" src="Black_Gold_Modern_Real_Estate_Logo-removebg-preview.png" alt="Minha Logomarca">
+  <header>
+    <nav>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="side-bar active">
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+          <div class="item"><a href="tabela.html" class="sub-itemenco"><i class="fas fa-desktop"></i>Encomendas</div>
+          <div class="item">
+            <a class="sub-btn"><i class="fas fa-table"></i>Social<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+              <a href="#" class="sub-itemnodi"><i class="fas fa-bell"></i>Notificação</a>
+              <a href="#" class="sub-item"><i class="fas fa-bell"></i>Aviso Reunião</a>
+              <a href="#" class="sub-item"><i class="fas fa-city"></i>Condominio</a>
+              <a href="#" class="sub-item"><i class="fas fa-clipboard"></i>Aluguel</a>
+              <a href="#" class="sub-item"><i class="fa fa-comments	"></i>Agendamento</a>
+            </div>
+            <div class="item">
+            <a class="sub-btn"><i class="fas fa-table"></i>Controle de Acesso<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+              <a href="#" class="sub-item"><i class="fas fa-glass-martini"></i>Area Comum</a>
+              <a href="#" class="sub-item"><i class="fas fa-door-open"></i>Portaria</a>
+              <a href="#" class="sub-item"><i class="fas fa-warehouse"></i>Portões </a>
+      
+            </div>
+          </div>
+          <div class="item">
+            <a class="sub-btn"><i class="fas fa-table"></i>Gestão de Documentos<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu"><!--MENUS PRINCIPAIS-->
+              <a href="#" class="sub-item"><i class="fas fa-archive"></i>Armazenar</a>
+              <a href="#" class="sub-item"><i class="far fa-newspaper"></i>Documentos</a>
+              <a href="#" class="sub-item"><i class="far fa-clipboard"></i>Contratos</a>
+              <a href="#" class="sub-item"><i class="fas fa-clipboard-list"></i>Registro</a>
+            </div>
+          <div class="item">
+            <a class="sub-btn"><i class="fas fa-cogs"></i>Financeiro<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+              <a href="#" class="sub-item"><i class="fas fa-money-bill-wave-alt	"></i>Pagamentos</a>
+              <a href="#" class="sub-item"><i class="fas fa-money-bill-wave-alt"></i>Condominio</a>
+              <a href="#" class="sub-item"><i class="fab fa-amazon-pay	"></i>Gerar Boletos</a>
+            </div>
+          </div>
+          <div class="item"><a href="pagina principal.html" class="sub-itemenco"><i class="	fas fa-sign-out-alt"></i>Sair</div>
+        </div>
+      </div>
+      <section>
+        
+      </section>
+    </nav>
+    
+  </header>
+
+ 
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+      });
+
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+      
+    });
+  </script>
+</body>
+</html>
